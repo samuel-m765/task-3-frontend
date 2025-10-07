@@ -8,7 +8,7 @@ const API_URL = "https://jsonplaceholder.typicode.com/todos?_limit=5"; // mock A
 function getTasks() {
   fetch(API_URL)
     .then((res) => res.json())
-    .then((data) => {
+    .then((dzata) => {
       // Extract titles from the mock API
       tasks = data.map((item) => ({ id: item.id, task: item.title }));
       displayTasks();

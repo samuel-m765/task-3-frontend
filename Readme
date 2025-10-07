@@ -1,0 +1,100 @@
+#  To-Do List App (Task 3)
+
+A simple **To-Do List Web App** that allows users to add and delete tasks.  
+This project uses **HTML, CSS, and JavaScript (Fetch API)** with a **mock REST API** (`jsonplaceholder.typicode.com`) to simulate data persistence.
+
+---
+
+## Project Overview
+
+This is a lightweight To-Do application built as part of **Task 3 (Internship Project)**.  
+It demonstrates how to:
+- Fetch data from an external API using **Fetch**
+- Display dynamic data in the DOM
+- Handle **POST** and **DELETE** operations (mocked)
+- Use basic **CRUD principles** with a front-end JavaScript app
+
+---
+
+## Features
+
+✅ Fetch and display initial tasks from a mock API  
+✅ Add a new task dynamically  
+✅ Delete an existing task  
+✅ Clean and responsive UI built with CSS  
+✅ Uses `jsonplaceholder.typicode.com` for fake backend operations  
+
+---
+
+## 💻 Technologies Used
+
+| Category | Technology |
+|-----------|-------------|
+| **Frontend** | HTML5, CSS3, JavaScript (ES6) |
+| **API** | [JSONPlaceholder](https://jsonplaceholder.typicode.com/) |
+| **Tools** | VS Code / Live Server |
+
+---
+
+## Folder Structure
+
+task-3-frontend/
+│
+├── index.html # Main HTML file
+├── style.css # Styling for the app
+├── script.js # Core JavaScript logic
+└── README.md # Project documentation
+
+yaml
+Copy code
+
+---
+
+## ⚙️ Setup Instructions
+
+### 1️⃣ Clone the repository
+
+```bash
+git clone https://github.com/samuel-m765/task-3-frontend.git
+ task-3-frontend
+2️ Open the project
+You can open the folder in VS Code or any preferred code editor.
+
+3️ Run the project
+You can open index.html directly in your browser, or use Live Server in VS Code:
+
+bash
+Copy code
+
+Right click → "Open with Live Server"
+4️ Interact with the app
+Add a task in the input box → click Add Task
+
+Click Delete beside a task to remove it
+
+The data will update instantly (mocked)
+
+How It Works
+Fetch Tasks:
+The app fetches 5 sample tasks from the JSONPlaceholder API on load.
+
+js
+Copy code
+const API_URL = "https://jsonplaceholder.typicode.com/todos?_limit=5";
+Add Task:
+A new task is added with a mock POST request:
+
+js
+Copy code
+fetch("https://jsonplaceholder.typicode.com/todos", {
+  method: "POST",
+  body: JSON.stringify({ title: taskText }),
+  headers: { "Content-Type": "application/json" },
+})
+Delete Task:
+Tasks are removed using a mock DELETE request and updated locally in the array.
+
+\ Known Limitations
+The app uses a mock API (jsonplaceholder.typicode.com), so changes are not saved permanently.
+If you refresh the page, tasks will reset to the initial 5 fetched items.
+
